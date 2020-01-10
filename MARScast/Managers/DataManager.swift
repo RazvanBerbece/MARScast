@@ -18,7 +18,9 @@ final class DataManager {
     }
     
     @discardableResult
-    func getWeatherOnMars(_apikey: String) -> String
+    func getWeatherOnMars(
+        _apikey: String,
+        completion: @escaping ((_ data: Data) -> Void))
     {
         let url = URL(string: baseURL)
         // ?api_key=\(key)/&feedtype=json&ver=1.0"
@@ -28,29 +30,45 @@ final class DataManager {
             URL(string: $0.absoluteString + path)
         }
         
-        var lastTemp : String = ""
+        // var lastTemp : String = ""
         // Set up the call and fire it off
         print("Connecting to \(String(describing: finalURL)) ...")
-        let task = URLSession.shared.dataTask(with: finalURL!) {
+        let task = URLSession.shared.dataTask(with: finalURL!, completionHandler: {
             (data, response, error) in
-            guard let data = data else { return }
-            var lastDayChecked : Int = 0
+            if let error = error {
+                print(error)
+            }
             
-            //  Parse JSON Data String
-            let json = String(data: data, encoding: .utf8)
-            if let data = json!.data(using: .utf8) {
-                if let json = try? JSON(data: data) {
-                    for item in json["sol_keys"].arrayValue {
-                        //  print(item.stringValue)
-                        lastDayChecked = Int(item.stringValue)!
-                    }
-                    lastTemp = String(describing: json["\(lastDayChecked)"]["AT"]["av"])
-                    print(json["\(lastDayChecked)"]["AT"]["av"])
+            if let data = data {
+                print("\(data)")
+            }
+            
+            if let response = response {
+                let httpResponse = response as! HTTPURLResponse
+                if httpResponse.statusCode == 200 {
+                    completion(data!)
+                } else {
+                    //completion(nil)
                 }
             }
-        }
+        })
+            //  Parse JSON Data String
+            /*
+            let json = String(data: data, encoding: .utf8)
+            let jsonData = json!.data(using: .utf8)
+            if let json = try? JSON(data: jsonData!)
+            {
+                for item in json["sol_keys"].arrayValue
+                {
+                    //  print(item.stringValue)
+                    lastDayChecked = Int(item.stringValue)!
+                }
+                lastTemp = String(describing: json["\(lastDayChecked)"]["AT"]["av"])
+                print(lastTemp)
+            }
+            */
+        //}
         task.resume()
-        return lastTemp
     }
 }
 

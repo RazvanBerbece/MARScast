@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.94999998807907104" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rsz_mountains_night_clouds_peaks_120300_1350x2400" translatesAutoresizingMaskIntoConstraints="NO" id="dn7-DW-YD9">
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.94999998807907104" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clearback" translatesAutoresizingMaskIntoConstraints="NO" id="dn7-DW-YD9">
                                 <rect key="frame" x="0.0" y="-44" width="375" height="900"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planet Mars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UY-c0-crf">
@@ -91,6 +91,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="rsz_mountains_night_clouds_peaks_120300_1350x2400" width="675" height="1200"/>
+        <image name="clearback" width="934" height="1400"/>
     </resources>
 </document>
