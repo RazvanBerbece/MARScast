@@ -2,8 +2,8 @@
 //  DataManager.swift
 //  MARScast
 //
-//  Created by Razvan-Antonio Berbece on 08/12/2019.
-//  Copyright © 2019 Razvan-Antonio Berbece. All rights reserved.
+//  Created by Razvan-Antonio Berbece on 10/01/2020.
+//  Copyright © 2020 Razvan-Antonio Berbece. All rights reserved.
 //
 
 import Foundation

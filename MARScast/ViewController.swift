@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  MARScast
 //
-//  Created by Razvan-Antonio Berbece on 08/12/2019.
-//  Copyright © 2019 Razvan-Antonio Berbece. All rights reserved.
+//  Created by Razvan-Antonio Berbece on 10/01/2020.
+//  Copyright © 2020 Razvan-Antonio Berbece. All rights reserved.
 //
 
 import UIKit
@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     var lastDayChecked : Int = 0
     var currentTemperature : String = ""
     var isWarm : Bool = true // Compared to average on Mars of 65
+    var isAverage : Bool = false // Average temperature reached
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,16 +42,24 @@ class ViewController: UIViewController {
                     }
                     self.currentTemperature = String(describing: json["\(self.lastDayChecked)"]["AT"]["av"])
                     //  print(self.currentTemperature)
-                    let intTemperature = Int(self.currentTemperature) ?? 0
-                    if intTemperature > -60 {
+                    let floatTemperature = Float(self.currentTemperature) ?? 0
+                    let temperatureInCelsius = (floatTemperature - 32) * 5/9
+                    if temperatureInCelsius > -50 {
                         self.isWarm = true
                     }
-                    else if intTemperature < -70 {
+                    else if temperatureInCelsius < -58 {
                         self.isWarm = false
                     }
+                    else if temperatureInCelsius < -50 && temperatureInCelsius > -58 {
+                        self.isAverage = true
+                    }
+                    let celsiusString = String(temperatureInCelsius).prefix(5)
                     DispatchQueue.main.async {
-                        self.mainDegrees.text = self.currentTemperature
-                        if self.isWarm == true {
+                        self.mainDegrees.text = celsiusString + " °C"
+                        if self.isAverage == true {
+                            self.mainDesc.text = "It is an average temperature on Mars currently ..."
+                        }
+                        else if self.isWarm == true {
                             self.mainDesc.text = "It is quite warm on Mars compared to usual average ..."
                         }
                         else {
