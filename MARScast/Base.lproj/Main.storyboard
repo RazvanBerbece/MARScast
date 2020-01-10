@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eVc-Dj-WaG">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="dbt-cE-6jS">
+            <objects>
+                <viewController id="eVc-Dj-WaG" customClass="ViewController" customModule="MARScast" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Azs-Q5-q4I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.94999998807907104" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rsz_mountains_night_clouds_peaks_120300_1350x2400" translatesAutoresizingMaskIntoConstraints="NO" id="dn7-DW-YD9">
+                                <rect key="frame" x="0.0" y="-44" width="375" height="900"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planet Mars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UY-c0-crf">
+                                <rect key="frame" x="0.0" y="331" width="375" height="60"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MARS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7k-Od-84o">
+                                <rect key="frame" x="58" y="175" width="172" height="66"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's a bit cold it seems ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p27-8Q-lGx">
+                                <rect key="frame" x="0.0" y="501" width="375" height="19"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Italic" family="Rockwell" pointSize="19"/>
+                                <color key="textColor" red="0.74619345709999996" green="0.82213673860000003" blue="0.82000174589999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Degrees)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reI-Le-gQV">
+                                <rect key="frame" x="0.0" y="389" width="375" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="Wes-Um-dN4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVk-r8-trQ">
+                                <rect key="frame" x="211" y="187" width="164" height="42"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="50"/>
+                                <color key="textColor" red="0.60627448559999997" green="0.1105902269" blue="0.12154255059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3UY-c0-crf" firstAttribute="centerX" secondItem="Azs-Q5-q4I" secondAttribute="centerX" id="1eX-Pf-EYg"/>
+                            <constraint firstItem="3UY-c0-crf" firstAttribute="top" secondItem="m7k-Od-84o" secondAttribute="bottom" constant="90" id="59n-cu-zac"/>
+                            <constraint firstItem="p27-8Q-lGx" firstAttribute="trailing" secondItem="reI-Le-gQV" secondAttribute="trailing" id="5aw-Tz-UTK"/>
+                            <constraint firstItem="dn7-DW-YD9" firstAttribute="trailing" secondItem="p27-8Q-lGx" secondAttribute="trailing" id="6xT-FX-euf"/>
+                            <constraint firstItem="p27-8Q-lGx" firstAttribute="leading" secondItem="reI-Le-gQV" secondAttribute="leading" id="94M-tg-x2r"/>
+                            <constraint firstItem="reI-Le-gQV" firstAttribute="top" secondItem="Azs-Q5-q4I" secondAttribute="top" constant="389" id="Evq-qm-7jX"/>
+                            <constraint firstItem="reI-Le-gQV" firstAttribute="trailing" secondItem="3UY-c0-crf" secondAttribute="trailing" id="Fmb-yB-n9q"/>
+                            <constraint firstItem="dn7-DW-YD9" firstAttribute="leading" secondItem="3UY-c0-crf" secondAttribute="leading" id="Juk-wE-jeQ"/>
+                            <constraint firstItem="reI-Le-gQV" firstAttribute="leading" secondItem="3UY-c0-crf" secondAttribute="leading" id="Lq9-3z-NwZ"/>
+                            <constraint firstItem="3UY-c0-crf" firstAttribute="leading" secondItem="lqa-2O-EhN" secondAttribute="leading" id="TdU-mf-6al"/>
+                            <constraint firstItem="m7k-Od-84o" firstAttribute="leading" secondItem="lqa-2O-EhN" secondAttribute="leading" constant="58" id="TyB-jc-U1h"/>
+                            <constraint firstItem="DVk-r8-trQ" firstAttribute="trailing" secondItem="3UY-c0-crf" secondAttribute="trailing" id="blg-LH-Nwp"/>
+                            <constraint firstItem="DVk-r8-trQ" firstAttribute="top" secondItem="lqa-2O-EhN" secondAttribute="top" constant="143" id="c4h-Tp-M4A"/>
+                            <constraint firstItem="DVk-r8-trQ" firstAttribute="centerY" secondItem="m7k-Od-84o" secondAttribute="centerY" id="d6Q-ho-AKi"/>
+                            <constraint firstItem="dn7-DW-YD9" firstAttribute="top" secondItem="Azs-Q5-q4I" secondAttribute="topMargin" constant="-88" id="gIB-A9-9aG"/>
+                            <constraint firstItem="p27-8Q-lGx" firstAttribute="top" secondItem="reI-Le-gQV" secondAttribute="bottom" constant="40" id="gbd-UW-YZ1"/>
+                            <constraint firstItem="3UY-c0-crf" firstAttribute="top" secondItem="Azs-Q5-q4I" secondAttribute="top" constant="331" id="gre-x8-RB3"/>
+                            <constraint firstItem="DVk-r8-trQ" firstAttribute="leading" secondItem="lqa-2O-EhN" secondAttribute="leading" constant="211" id="iyb-LN-CGE"/>
+                            <constraint firstItem="lqa-2O-EhN" firstAttribute="trailing" secondItem="m7k-Od-84o" secondAttribute="trailing" constant="145" id="jpr-ru-Qvz"/>
+                            <constraint firstItem="dn7-DW-YD9" firstAttribute="centerY" secondItem="Azs-Q5-q4I" secondAttribute="centerY" id="kf4-W6-6qX"/>
+                            <constraint firstItem="m7k-Od-84o" firstAttribute="top" secondItem="lqa-2O-EhN" secondAttribute="top" constant="131" id="pe9-gV-1eq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lqa-2O-EhN"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HbS-Cw-nmJ"/>
+                    <connections>
+                        <outlet property="background" destination="dn7-DW-YD9" id="PEE-TX-mzo"/>
+                        <outlet property="mainDegrees" destination="reI-Le-gQV" id="KoZ-9V-UjW"/>
+                        <outlet property="mainDesc" destination="p27-8Q-lGx" id="xel-lt-Agq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O6S-gF-IU9" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2949.5999999999999" y="135.96059113300493"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rsz_mountains_night_clouds_peaks_120300_1350x2400" width="675" height="1200"/>
+    </resources>
+</document>

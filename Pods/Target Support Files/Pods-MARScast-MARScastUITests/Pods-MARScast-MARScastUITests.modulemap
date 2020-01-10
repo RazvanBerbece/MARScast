@@ -1,0 +1,6 @@
+framework module Pods_MARScast_MARScastUITests {
+  umbrella header "Pods-MARScast-MARScastUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
