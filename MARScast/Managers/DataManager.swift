@@ -17,7 +17,6 @@ final class DataManager {
         self.baseURL = baseURL
     }
     
-    @discardableResult
     func getWeatherOnMars(
         _apikey: String,
         completion: @escaping ((_ data: Data) -> Void))
@@ -39,6 +38,7 @@ final class DataManager {
                 print(error)
             }
             
+            //  Checking data size for debugging purposes
             if let data = data {
                 print("\(data)")
             }
@@ -52,22 +52,6 @@ final class DataManager {
                 }
             }
         })
-            //  Parse JSON Data String
-            /*
-            let json = String(data: data, encoding: .utf8)
-            let jsonData = json!.data(using: .utf8)
-            if let json = try? JSON(data: jsonData!)
-            {
-                for item in json["sol_keys"].arrayValue
-                {
-                    //  print(item.stringValue)
-                    lastDayChecked = Int(item.stringValue)!
-                }
-                lastTemp = String(describing: json["\(lastDayChecked)"]["AT"]["av"])
-                print(lastTemp)
-            }
-            */
-        //}
         task.resume()
     }
 }

@@ -20,12 +20,10 @@ class ViewController: UIViewController {
     
     var lastDayChecked : Int = 0
     var currentTemperature : String = ""
+    var isWarm : Bool = true // Compared to average on Mars of 65
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.addBackground(contentMode: .center)
-        
         dataManager.getWeatherOnMars(_apikey: API.key, completion:  {
             data in
             switch data.isEmpty {
@@ -42,9 +40,22 @@ class ViewController: UIViewController {
                         self.lastDayChecked = Int(item.stringValue)!
                     }
                     self.currentTemperature = String(describing: json["\(self.lastDayChecked)"]["AT"]["av"])
-                    print(self.currentTemperature)
+                    //  print(self.currentTemperature)
+                    let intTemperature = Int(self.currentTemperature) ?? 0
+                    if intTemperature > -60 {
+                        self.isWarm = true
+                    }
+                    else if intTemperature < -70 {
+                        self.isWarm = false
+                    }
                     DispatchQueue.main.async {
                         self.mainDegrees.text = self.currentTemperature
+                        if self.isWarm == true {
+                            self.mainDesc.text = "It is quite warm on Mars compared to usual average ..."
+                        }
+                        else {
+                            self.mainDesc.text = "It is quite cold on Mars compared to usual average ..."
+                        }
                     }
                 }
             }
