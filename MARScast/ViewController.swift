@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import MapKit
+import SwiftyGif
 
 class ViewController: UIViewController {
     
@@ -18,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var mainDesc: UILabel!
     @IBOutlet weak var background: UIImageView!
     @IBOutlet weak var windSpeedDisplay: UILabel!
+    @IBOutlet weak var infoButton: UIButton!
     
     var lastDayChecked : Int = 0
     var currentTemperature : String = ""
@@ -27,13 +29,41 @@ class ViewController: UIViewController {
     var isWarm : Bool = true // Compared to average on Mars of 65
     var isAverage : Bool = false // Average temperature reached
     
+    @IBAction func showAlertButtonTapped(_ sender: UIButton) {
+        
+        // create the alert
+        let alert = UIAlertController(
+            title: "Information Request",
+            message:
+            "Average wind speed on Earth: \n 10m Ocean-level: 6.64 m/s \n 10m Land-level: 3.28 m/s",
+            preferredStyle: UIAlertController.Style.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertAction.Style.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Adding the gif overlay for the stars effect
+        do {
+            let gif = try UIImage(gifName: "starsgif.gif")
+            background = UIImageView(gifImage: gif, loopCount: -1) // Use -1 for infinite loop
+            background.frame = view.bounds
+            background.alpha = 0.199
+            view.addSubview(background)
+        } catch {
+            print(error)
+        }
+        
         dataManager.getWeatherOnMars(_apikey: API.key, completion:  {
             data in
             switch data.isEmpty {
             case true:
-                print("The data received appears to be empty. Try again.")
+                print("The data package appears to be empty. Try again.")
             case false:
                 let json = String(data: data, encoding: .utf8)
                 let jsonData = json!.data(using: .utf8)
