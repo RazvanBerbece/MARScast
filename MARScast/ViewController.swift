@@ -33,9 +33,9 @@ class ViewController: UIViewController {
         
         // create the alert
         let alert = UIAlertController(
-            title: "Information Request",
+            title: "Comparison Alert",
             message:
-            "Average wind speed on Earth: \n 10m Ocean-level: 6.64 m/s \n 10m Land-level: 3.28 m/s",
+            "Average wind speed on Earth: \n\n 10m Ocean-level: 6.64 m/s \n 10m Land-level: 3.28 m/s",
             preferredStyle: UIAlertController.Style.alert)
         
         // add an action (button)

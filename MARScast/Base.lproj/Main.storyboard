@@ -33,7 +33,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's a bit cold it seems ..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p27-8Q-lGx">
                                 <rect key="frame" x="0.0" y="469" width="375" height="106"/>
                                 <fontDescription key="fontDescription" name="Rockwell-Italic" family="Rockwell" pointSize="22"/>
-                                <color key="textColor" red="0.74619345709999996" green="0.82213673860000003" blue="0.82000174589999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.71198755502700806" green="0.93352729082107544" blue="0.88830667734146118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Degrees)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reI-Le-gQV">
@@ -54,14 +54,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="And a bit windy ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJn-I5-WcC">
                                 <rect key="frame" x="0.0" y="554" width="375" height="31"/>
                                 <fontDescription key="fontDescription" name="Rockwell-Italic" family="Rockwell" pointSize="20"/>
-                                <color key="textColor" red="0.74619345709999996" green="0.82213673860000003" blue="0.82000174589999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.71198755502700806" green="0.93352729082107544" blue="0.88830667734146118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ga-vA-hjv">
-                                <rect key="frame" x="334" y="554" width="24.333333333333332" height="21.333333333333332"/>
+                                <rect key="frame" x="334" y="554" width="24.333333333333314" height="21.333333333333371"/>
                                 <color key="tintColor" red="0.74619345709999996" green="0.82213673860000003" blue="0.82000174589999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal">
-                                    <color key="titleColor" red="0.74619345709999996" green="0.82213673860000003" blue="0.82000174589999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.71198755502700806" green="0.93352729082107544" blue="0.88830667734146118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="showAlertButtonTapped:" destination="eVc-Dj-WaG" eventType="touchUpInside" id="MXY-Yu-CwL"/>
