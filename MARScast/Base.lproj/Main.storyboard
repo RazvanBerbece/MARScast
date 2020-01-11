@@ -32,7 +32,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's a bit cold it seems ..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p27-8Q-lGx">
                                 <rect key="frame" x="0.0" y="469" width="375" height="106"/>
-                                <fontDescription key="fontDescription" name="Rockwell-Italic" family="Rockwell" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Italic" family="Rockwell" pointSize="22"/>
                                 <color key="textColor" red="0.74619345709999996" green="0.82213673860000003" blue="0.82000174589999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -51,6 +51,12 @@
                                 <color key="textColor" red="0.60627448559999997" green="0.1105902269" blue="0.12154255059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="And a bit windy ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJn-I5-WcC">
+                                <rect key="frame" x="0.0" y="553" width="375" height="21"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Italic" family="Rockwell" pointSize="20"/>
+                                <color key="textColor" red="0.74619345709999996" green="0.82213673860000003" blue="0.82000174589999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -63,8 +69,12 @@
                             <constraint firstItem="reI-Le-gQV" firstAttribute="trailing" secondItem="3UY-c0-crf" secondAttribute="trailing" id="Fmb-yB-n9q"/>
                             <constraint firstItem="dn7-DW-YD9" firstAttribute="leading" secondItem="3UY-c0-crf" secondAttribute="leading" id="Juk-wE-jeQ"/>
                             <constraint firstItem="reI-Le-gQV" firstAttribute="leading" secondItem="3UY-c0-crf" secondAttribute="leading" id="Lq9-3z-NwZ"/>
+                            <constraint firstItem="lqa-2O-EhN" firstAttribute="bottom" secondItem="UJn-I5-WcC" secondAttribute="bottom" constant="204" id="MLW-UK-LaF"/>
                             <constraint firstItem="3UY-c0-crf" firstAttribute="leading" secondItem="lqa-2O-EhN" secondAttribute="leading" id="TdU-mf-6al"/>
                             <constraint firstItem="m7k-Od-84o" firstAttribute="leading" secondItem="lqa-2O-EhN" secondAttribute="leading" constant="58" id="TyB-jc-U1h"/>
+                            <constraint firstItem="UJn-I5-WcC" firstAttribute="leading" secondItem="p27-8Q-lGx" secondAttribute="leading" id="Z3A-be-oTk"/>
+                            <constraint firstItem="UJn-I5-WcC" firstAttribute="trailing" secondItem="p27-8Q-lGx" secondAttribute="trailing" id="bd8-wr-afV"/>
+                            <constraint firstItem="UJn-I5-WcC" firstAttribute="top" secondItem="reI-Le-gQV" secondAttribute="bottom" constant="92" id="biq-RA-TGe"/>
                             <constraint firstItem="DVk-r8-trQ" firstAttribute="trailing" secondItem="3UY-c0-crf" secondAttribute="trailing" id="blg-LH-Nwp"/>
                             <constraint firstItem="DVk-r8-trQ" firstAttribute="top" secondItem="lqa-2O-EhN" secondAttribute="top" constant="143" id="c4h-Tp-M4A"/>
                             <constraint firstItem="lqa-2O-EhN" firstAttribute="bottom" secondItem="p27-8Q-lGx" secondAttribute="bottom" constant="203" id="cNF-3g-C6J"/>
@@ -84,6 +94,7 @@
                         <outlet property="background" destination="dn7-DW-YD9" id="PEE-TX-mzo"/>
                         <outlet property="mainDegrees" destination="reI-Le-gQV" id="KoZ-9V-UjW"/>
                         <outlet property="mainDesc" destination="p27-8Q-lGx" id="xel-lt-Agq"/>
+                        <outlet property="windSpeedDisplay" destination="UJn-I5-WcC" id="nyE-Zt-YcB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6S-gF-IU9" sceneMemberID="firstResponder"/>

@@ -17,9 +17,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var mainDegrees: UILabel!
     @IBOutlet weak var mainDesc: UILabel!
     @IBOutlet weak var background: UIImageView!
+    @IBOutlet weak var windSpeedDisplay: UILabel!
     
     var lastDayChecked : Int = 0
     var currentTemperature : String = ""
+    
+    var windSpeed : String = ""
+    
     var isWarm : Bool = true // Compared to average on Mars of 65
     var isAverage : Bool = false // Average temperature reached
     
@@ -41,6 +45,7 @@ class ViewController: UIViewController {
                         self.lastDayChecked = Int(item.stringValue)!
                     }
                     self.currentTemperature = String(describing: json["\(self.lastDayChecked)"]["AT"]["av"])
+                    self.windSpeed = String(describing: json["\(self.lastDayChecked)"]["HWS"]["av"])
                     //  print(self.currentTemperature)
                     let floatTemperature = Float(self.currentTemperature) ?? 0
                     let temperatureInCelsius = (floatTemperature - 32) * 5/9
@@ -56,6 +61,7 @@ class ViewController: UIViewController {
                     let celsiusString = String(temperatureInCelsius).prefix(5)
                     DispatchQueue.main.async {
                         self.mainDegrees.text = celsiusString + " °C"
+                        self.windSpeedDisplay.text = "Wind speed is : " + self.windSpeed + " m/s"
                         if self.isAverage == true {
                             self.mainDesc.text = "It is an average temperature on Mars currently ..."
                         }
