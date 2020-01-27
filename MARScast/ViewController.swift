@@ -71,12 +71,14 @@ class ViewController: UIViewController {
             background.frame = view.bounds
             background.alpha = 0.199
             
+            /* --- Mars Planet GIF Implementation in ViewController ---
             marsGIF = UIImageView(gifImage: gif2, loopCount: -1) // Use -1 for infinite loop
             marsGIF.frame = CGRect(x: view.bounds.maxX - 220, y: view.bounds.maxY - 180, width: 75.0, height: 75.0)
             marsGIF.alpha = 1
+             */
             
             self.view.insertSubview(background, at: 1)
-            self.view.insertSubview(marsGIF, at: 2)
+            //  self.view.insertSubview(marsGIF, at: 2)
             
         } catch {
             print(error)
