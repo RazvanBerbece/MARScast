@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var background: UIImageView!
     @IBOutlet weak var windSpeedDisplay: UILabel!
     @IBOutlet weak var infoButton: UIButton!
+    @IBOutlet weak var marsGIF: UIImageView!
     
     var lastDayChecked : Int = 0
     var currentTemperature : String = ""
@@ -52,7 +53,7 @@ class ViewController: UIViewController {
     @IBAction func unwindToViewController(segue: UIStoryboardSegue) {
         // Designed to perform unwind action from SecondaryVC
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,10 +65,19 @@ class ViewController: UIViewController {
         // Adding the gif overlay for the stars effect
         do {
             let gif = try UIImage(gifName: "starsgif.gif")
+            let gif2 = try UIImage(gifName: "marsGIF.gif")
+            
             background = UIImageView(gifImage: gif, loopCount: -1) // Use -1 for infinite loop
             background.frame = view.bounds
             background.alpha = 0.199
-            view.addSubview(background)
+            
+            marsGIF = UIImageView(gifImage: gif2, loopCount: -1) // Use -1 for infinite loop
+            marsGIF.frame = CGRect(x: view.bounds.maxX - 220, y: view.bounds.maxY - 180, width: 75.0, height: 75.0)
+            marsGIF.alpha = 1
+            
+            self.view.insertSubview(background, at: 1)
+            self.view.insertSubview(marsGIF, at: 2)
+            
         } catch {
             print(error)
         }

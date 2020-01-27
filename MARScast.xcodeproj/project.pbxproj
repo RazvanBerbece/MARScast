@@ -10,7 +10,9 @@
 		2C887A29F4CCF96B1389DD35 /* Pods_MARScastTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B893913B63995A0139CFE8F /* Pods_MARScastTests.framework */; };
 		3138E55DCF0FACBB735847C0 /* Pods_MARScast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C2D5F792C8901C2259F91E /* Pods_MARScast.framework */; };
 		6F0CA8D123DE86D60003B6A0 /* SecondaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0CA8D023DE86D60003B6A0 /* SecondaryVC.swift */; };
+		6F16A19423DF1B1F00B2ED3F /* marsGIF.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6F16A19323DF1B1F00B2ED3F /* marsGIF.gif */; };
 		6F449A4623C98611000EF4F9 /* starsgif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6F449A4523C98611000EF4F9 /* starsgif.gif */; };
+		6F680FCE23DEF64E0086A19E /* PhotoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F680FCD23DEF64E0086A19E /* PhotoDataManager.swift */; };
 		6F97E1A323C818B400E2F922 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F97E1A223C818B400E2F922 /* AppDelegate.swift */; };
 		6F97E1A523C818B400E2F922 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F97E1A423C818B400E2F922 /* SceneDelegate.swift */; };
 		6F97E1A723C818B400E2F922 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F97E1A623C818B400E2F922 /* ViewController.swift */; };
@@ -48,7 +50,9 @@
 		49BBC975E2BC21AF93239A8A /* Pods-MARScast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MARScast.debug.xcconfig"; path = "Target Support Files/Pods-MARScast/Pods-MARScast.debug.xcconfig"; sourceTree = "<group>"; };
 		62C2D5F792C8901C2259F91E /* Pods_MARScast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MARScast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F0CA8D023DE86D60003B6A0 /* SecondaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryVC.swift; sourceTree = "<group>"; };
+		6F16A19323DF1B1F00B2ED3F /* marsGIF.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = marsGIF.gif; path = ../../../../../../Downloads/marsGIF.gif; sourceTree = "<group>"; };
 		6F449A4523C98611000EF4F9 /* starsgif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = starsgif.gif; path = ../../../../../../Downloads/starsgif.gif; sourceTree = "<group>"; };
+		6F680FCD23DEF64E0086A19E /* PhotoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataManager.swift; sourceTree = "<group>"; };
 		6F97E19F23C818B400E2F922 /* MARScast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MARScast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F97E1A223C818B400E2F922 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F97E1A423C818B400E2F922 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 		6F449A4423C98603000EF4F9 /* Gifs */ = {
 			isa = PBXGroup;
 			children = (
+				6F16A19323DF1B1F00B2ED3F /* marsGIF.gif */,
 				6F449A4523C98611000EF4F9 /* starsgif.gif */,
 			);
 			path = Gifs;
@@ -169,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				6F97E1D423C818F800E2F922 /* DataManager.swift */,
+				6F680FCD23DEF64E0086A19E /* PhotoDataManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F16A19423DF1B1F00B2ED3F /* marsGIF.gif in Resources */,
 				6F97E1AF23C818B500E2F922 /* LaunchScreen.storyboard in Resources */,
 				6F97E1AC23C818B500E2F922 /* Assets.xcassets in Resources */,
 				6F97E1AA23C818B400E2F922 /* Main.storyboard in Resources */,
@@ -438,6 +445,7 @@
 			files = (
 				6F97E1D923C8190F00E2F922 /* Configuration.swift in Sources */,
 				6F0CA8D123DE86D60003B6A0 /* SecondaryVC.swift in Sources */,
+				6F680FCE23DEF64E0086A19E /* PhotoDataManager.swift in Sources */,
 				6F97E1A723C818B400E2F922 /* ViewController.swift in Sources */,
 				6F97E1D523C818F800E2F922 /* DataManager.swift in Sources */,
 				6F97E1A323C818B400E2F922 /* AppDelegate.swift in Sources */,

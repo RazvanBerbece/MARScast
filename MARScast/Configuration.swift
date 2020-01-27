@@ -14,5 +14,6 @@ struct API {
     static let key = "CtqIZFGQQf8Ee5qei4MWm4mRsKBt1ffKBsYrPbLH"
     static let baseURLString: String = "https://\(url)/insight_weather/"
     //    ?api_key=\(key)/&feedtype=json&ver=1.0"
+    static let baseURLStringPhotos: String = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos"
 }
 

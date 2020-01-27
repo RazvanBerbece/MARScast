@@ -6,6 +6,7 @@ target 'MARScast' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Alamofire', '~> 5.0.0-rc.3'
   pod 'SwiftyGif'
+  pod 'Kingfisher'
   use_frameworks!
 
   # Pods for MARScast
