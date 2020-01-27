@@ -44,9 +44,22 @@ class ViewController: UIViewController {
         // show the alert
         self.present(alert, animated: true, completion: nil)
     }
+    
+    @IBAction func ToSecondaryVC(sender: AnyObject) {
+        self.performSegue(withIdentifier: "SecondaryVC", sender: sender)
+    }
+    
+    @IBAction func unwindToViewController(segue: UIStoryboardSegue) {
+        // Designed to perform unwind action from SecondaryVC
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //  Adding swipe gesture recognizer in order to change ViewController to SecondaryVC
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.ToSecondaryVC))
+        swipeLeft.direction = .left
+        self.view.addGestureRecognizer(swipeLeft)
         
         // Adding the gif overlay for the stars effect
         do {
